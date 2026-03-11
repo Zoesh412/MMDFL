@@ -1,0 +1,26 @@
+一.安装Conda
+  在D盘新建Conda文件夹，下载Conda到该文件夹中
+  下载完成后于命令行在D:\Conda\Scripts名录下输入
+  conda --version
+  输出得到conda 26.1.1，安装成功
+二.安装依赖库
+  在C:\Users\Shuhan Zhang\Desktop\MMDFL名录下直接执行python main_fed.py，报错缺少库，于是进行库下载
+  于C:\Users\Shuhan Zhang\Desktop\MMDFL名录下依次执行
+  pip install matplotlib
+  pip install torchvision
+  pip install vit_pytorch
+  pip install thop
+  pip install tqdm
+三.代码调整
+  重新执行python main_fed.py，报错缺少Algorithm.Training_OSGP.py文件，于是在main_fed.py中注释掉
+  from Algorithm.Training_OSGP import OSGP
+四.安装依赖库（续）
+  重新执行python main_fed.py，报错缺少ujson库，于是继续在C:\Users\Shuhan Zhang\Desktop\MMDFL名录下下载，输入
+  pip install ujson
+五.分割数据
+  重新执行python main_fed.py，报错缺少数据集分类后的cifar10_20_noniidCase5_beta1.0.json文件
+  在C:\Users\Shuhan Zhang\Desktop\MMDFL名录下执行
+  python main_fed.py --generate_data 1
+  把generate_data设置为1
+六.代码运行
+  重新执行python main_fed.py，代码就开始正常运行，训练开始了
